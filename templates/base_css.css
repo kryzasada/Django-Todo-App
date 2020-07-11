@@ -29,16 +29,17 @@ div.logo{
 	
 }
 
-div.user-login{
+div.user-logged-out{
 	width: 23%;
 	height:  120px;
 	min-width : 192px;
-	max-width: 240px;
+	max-width: 280px;
 
 	margin-right: 10px;
 	#background-color: red;
 	display: inline-block;
 	float: right;
+	line-height: 115px;
 	
 	
 }
@@ -59,30 +60,9 @@ div.user-login{
 	font-size: 1.1em;
 	color: #FFCF91;
 	
-	margin-top: 30px;
-	
 }
 
-.user-logged-in-button{
-	width: 90%;
-	height : 50px;
-	margin: 5px;
-	margin-right: 3.3%;
-	background-color: blue;
-	background-color: #3F4D53;
-	border: none;
-	cursor: pointer;
-	border-radius: 30%;
-	outline: none;
-  
-	font-size: 1.1em;
-	color: #FFCF91;
-	margin-top: 30px;
-	text-overflow: ellipsis;
-	overflow: hidden;
 
-	
-}
 
 
 

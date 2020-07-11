@@ -1,11 +1,10 @@
-{% load static %}
-
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Title</title>
 		
-		<link rel="stylesheet" type="text/css" href="{% static 'base_css.css' %}">
+		<link rel="stylesheet" type="text/css" href="base_css.css">
 		<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 	</head>
     <body>
@@ -13,11 +12,11 @@
 		<div class = "logo">
 			TO-DO
 		</div>
-		{% block content %}
-
-            replace me
-
-		{% endblock %}
+		
+		<div class = "user-logged-out">
+			<button class = "user-logged-out-button"> Log in </button>
+			<button class = "user-logged-out-button"> Sign up </button>
+		</div>
 	</div>
 
     </body>
