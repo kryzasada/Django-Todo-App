@@ -21,5 +21,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', user_login_out,  name='index' ),
     path('login', user_login_in,  name='index' ),
-    #path('login/', "b.html"),
 ]
