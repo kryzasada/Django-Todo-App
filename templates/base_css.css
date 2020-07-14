@@ -68,7 +68,7 @@ div.user-login{
 	height : 50px;
 	margin: 5px;
 	margin-right: 3.3%;
-	background-color: blue;
+	#background-color: blue;
 	background-color: #3F4D53;
 	border: none;
 	cursor: pointer;
@@ -82,6 +82,25 @@ div.user-login{
 	overflow: hidden;
 
 	
+}
+
+.login-form{
+	width: 330px;
+	min-width: 320px;
+	height : 20%;
+	min-height: 165px;
+	background-color: #ADC5D1; 
+	border: 1px solid #3F4D53;
+	margin: 0 auto;
+	position: relative;
+	top: 20%;
+	transform: translateY(-50%);
+	box-sizing: border-box;
+	padding-top: 20px;
+	
+	text-align: center;
+
+
 }
 
 

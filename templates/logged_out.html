@@ -2,10 +2,13 @@
 
 {% block content %}
 
-<div class = "user-login">
-			<button class = "user-logged-out-button"> Log in </button>
-			<button class = "user-logged-out-button"> Sign up </button>
-</div>
+<button class = "user-logged-out-button"> Log in </button>
+<button class = "user-logged-out-button"> Sign up </button>
+
+
+{% endblock %}
+
+{% block content_body %}
 
 <form method="POST"> {% csrf_token %}
 {{ form.as_p }}
