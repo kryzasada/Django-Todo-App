@@ -1,11 +1,16 @@
 from django import forms
-from .models import usersLogin
+from django.contrib.auth.models import User as usersLogin
+from django.contrib.auth.forms import UserCreationForm
 
 
-class userLoginForm(forms.ModelForm):
+class UsersCreationForm(UserCreationForm):
+    email = forms.EmailField()
+
     class Meta:
         model = usersLogin
         fields = [
-            "email",
-            "password",
+            'username',
+            'email',
+            'password1',
+            'password2',
         ]

@@ -1,14 +1,28 @@
-from django.shortcuts import render
-from .forms import userLoginForm
+from django.shortcuts import render, redirect
+from .forms import UsersCreationForm
 
 # Create your views here.
 
 
-def user_login_out(request):
-    form = userLoginForm(request.POST or None)
-    if form.is_valid():
-        form.save()
+def user_register(request):
+    if request.method == 'POST':
+        form = UsersCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            print("123")
+            return redirect('zalogowany')
+    else:
+        form = UsersCreationForm()
 
+    context = {
+        'form': form,
+    }
+    return render(request, 'logged_out.html', context)
+
+
+def user_login(request):
+    form = UsersCreationForm()
     context = {
         'form': form,
     }
