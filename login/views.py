@@ -21,13 +21,5 @@ def user_register(request):
     return render(request, 'logged_out.html', context)
 
 
-def user_login(request):
-    form = UsersCreationForm()
-    context = {
-        'form': form,
-    }
-    return render(request, 'logged_out.html', context)
-
-
 def user_login_in(request, *args, **kwargs):
     return render(request, 'logged_in.html', {})

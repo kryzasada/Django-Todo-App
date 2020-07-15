@@ -126,4 +126,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'templates'),
 ]
 
-LOGIN_REDIRECT_URL = ''
+LOGIN_REDIRECT_URL = 'zalogowany'
