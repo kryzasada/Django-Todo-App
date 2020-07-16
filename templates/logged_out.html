@@ -2,8 +2,8 @@
 
 {% block content %}
 
-<button class = "user-logged-out-button"> Log in </button>
-<button class = "user-logged-out-button"> Sign up </button>
+<button class = "user-logged-out-button" onclick="location.href='{% url 'login' %}'"> Log in </button>
+<button class = "user-logged-out-button" onclick="location.href='{% url 'register' %}'"> Sign up </button>
 
 
 {% endblock %}
