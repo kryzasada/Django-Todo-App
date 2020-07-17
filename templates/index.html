@@ -1,4 +1,4 @@
-{% load static %}
+{% load static  %}
 
 <html lang="en">
     <head>
@@ -22,14 +22,11 @@
 		{% endblock %}
 		</div>
 	</div>
-	<br>
-	<br>
-	<br>
-	<br><br>
-	<br>
-	<br>
-	<br><br>
-	
+	<div class = "login-settings" id="login-f" style="display: none">
+
+
+	</div>
+
 	<div class = "login-form">
 
 		{% block content_body %}
@@ -38,7 +35,18 @@
 
 		{% endblock %}
 		
-		</div>
+	</div>
+
+	<script>
+		function loginSettingsDisplay() {
+		  var x = document.getElementById("login-f");
+		  if (x.style.display == "none") {
+		  	x.style.display = "block";
+		  } else {
+				x.style.display = "none";
+		  }
+		}
+</script>
 
     </body>
 </html>

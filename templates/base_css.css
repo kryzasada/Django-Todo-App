@@ -89,11 +89,12 @@ div.user-login{
 	min-width: 320px;
 	height : 20%;
 	min-height: 165px;
-	background-color: #ADC5D1; 
+	#background-color: #ADC5D1;
+	background-color: red;
 	border: 1px solid #3F4D53;
 	margin: 0 auto;
 	position: relative;
-	top: 20%;
+	top: 50%;
 	transform: translateY(-50%);
 	box-sizing: border-box;
 	padding-top: 20px;
@@ -103,7 +104,14 @@ div.user-login{
 
 }
 
-
+.login-settings{
+	width: 100px;
+	height : 10%;
+	float:right;
+	background-color: red;
+	position: relative;
+	
+}
 
 
 
