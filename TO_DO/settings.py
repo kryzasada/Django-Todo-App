@@ -127,3 +127,9 @@ STATICFILES_DIRS = [
 ]
 
 LOGIN_REDIRECT_URL = 'zalogowany'
+
+AUTHENTICATION_BACKENDS = [
+
+    'login.authentication.EmailBackend'
+]
+
