@@ -2,14 +2,6 @@
 
 {% block content %}
 
-<button class = "user-logged-out-button" onclick="location.href='{% url 'login' %}'"> Log in </button>
-<button class = "user-logged-out-button" onclick="location.href='{% url 'register' %}'"> Sign up </button>
-
-
-{% endblock %}
-
-{% block content_body %}
-
 <form method="POST"> {% csrf_token %}
 {{ form.as_p }}
 	<input type="submit" value = "Login">

@@ -15,17 +15,19 @@
 			TO-DO
 		</div>
 		<div class = "user-login">
-		{% block content %}
+			{% if user.is_authenticated %}
+				<button class = "user-logged-in-button" onclick=" loginSettingsDisplay()"> Logged: {{ user.email }} </button>
+			{% else %}
+				<button class = "user-logged-out-button" onclick="location.href='{% url 'login' %}'"> Log in </button>
+				<button class = "user-logged-out-button" onclick="location.href='{% url 'register' %}'"> Sign up </button>
+			{% endif %}
 
-            replace me
-
-		{% endblock %}
 			<div class = "login-settings" id="login-f" style="display: none">
 
-				<a href="{% url 'login' %}" class="login-settings"> Logaut </a>
+				<a href="{% url 'logout' %}" class="login-settings"> Logaut </a>
 				<hr style="width: 70%;">
+			</div>
 		</div>
-	</div>
 
 
 
@@ -33,7 +35,7 @@
 
 	<div class = "login-form">
 
-		{% block content_body %}
+		{% block content %}
 
             replace me
 
