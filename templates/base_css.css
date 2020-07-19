@@ -31,7 +31,7 @@ div.logo{
 
 div.user-login{
 	width: 23%;
-	height:  120px;
+	height:  220px;
 	min-width : 192px;
 	max-width: 240px;
 
@@ -43,7 +43,7 @@ div.user-login{
 	
 }
 
-.user-logged-out-button{
+button.user-logged-out-button{
 	width: 43%;
 	height : 50px;
 	max-width: 80px;
@@ -63,7 +63,7 @@ div.user-login{
 	
 }
 
-.user-logged-in-button{
+button.user-logged-in-button{
 	width: 90%;
 	height : 50px;
 	margin: 5px;
@@ -84,13 +84,13 @@ div.user-login{
 	
 }
 
-.login-form{
+div.login-form{
 	width: 330px;
 	min-width: 320px;
 	height : 20%;
 	min-height: 165px;
-	#background-color: #ADC5D1;
-	background-color: red;
+	background-color: #ADC5D1;
+	#background-color: red;
 	border: 1px solid #3F4D53;
 	margin: 0 auto;
 	position: relative;
@@ -104,13 +104,24 @@ div.user-login{
 
 }
 
-.login-settings{
-	width: 100px;
-	height : 10%;
-	float:right;
-	background-color: red;
+div.login-settings{
+	width: 80%;
+	height : 30%;
+	margin: 0 auto;
+	background-color: #ADC5D1;
+	border: 1px solid black;
 	position: relative;
-	
+
+	text-align: center;
+	line-height: 45px;
+}
+
+a.login-settings{
+    font-size: 1.2em;
+	color: white;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	text-decoration: none;
 }
 
 
