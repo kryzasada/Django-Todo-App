@@ -9,6 +9,13 @@ div.masthead{
 	background-color: #3F4D53;
 }
 
+div.masthead-main-block{
+	width: 70%;
+	height : 100%; 
+	margin: 0 auto;
+}
+
+
 div.logo{
 	width: 25%;
 	height:  120px;
@@ -64,7 +71,7 @@ button.user-logged-out-button{
 }
 
 button.user-logged-in-button{
-	width: 90%;
+	width: 100%;
 	height : 50px;
 	margin: 5px;
 	margin-right: 3.3%;
@@ -84,6 +91,13 @@ button.user-logged-in-button{
 	
 }
 
+div.main-block{
+	width: 80%;
+	height: calc(100% - 120px);
+	margin: 0 auto;
+}
+	
+
 div.login-form{
 	width: 330px;
 	min-width: 320px;
@@ -94,7 +108,7 @@ div.login-form{
 	border: 1px solid #3F4D53;
 	margin: 0 auto;
 	position: relative;
-	top: 50%;
+	top: 35%;
 	transform: translateY(-50%);
 	box-sizing: border-box;
 	padding-top: 20px;
@@ -123,9 +137,6 @@ a.login-settings{
 	overflow: hidden;
 	text-decoration: none;
 }
-
-
-
 
 
 

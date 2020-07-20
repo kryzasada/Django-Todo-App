@@ -9,46 +9,49 @@
 		<link rel="stylesheet" type="text/css" href="base_css.css">
 		<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 	</head>
+	
     <body>
-	<div class = "masthead">
-		<div class = "logo">
-			TO-DO
-		</div>
-		<div class = "user-login">
-			{% if user.is_authenticated %}
-				<button class = "user-logged-in-button" onclick=" loginSettingsDisplay()"> Logged: {{ user.email }} </button>
-			{% else %}
-				<button class = "user-logged-out-button" onclick="location.href='{% url 'login' %}'"> Log in </button>
-				<button class = "user-logged-out-button" onclick="location.href='{% url 'register' %}'"> Sign up </button>
-			{% endif %}
-
-			<div class = "login-settings" id="login-f" style="display: none">
-
-				<a href="{% url 'logout' %}" class="login-settings"> Logaut </a>
-				<hr style="width: 70%;">
+		<div class = "masthead">
+		
+			<div class="masthead-main-block">
+				<div class = "logo">
+					TO-DO
+				</div>
+				<div class = "user-login">
+					{% if user.is_authenticated %}
+						<button class = "user-logged-in-button" onclick=" loginSettingsDisplay()"> Logged: {{ user.email }} </button>
+					{% else %}
+						<button class = "user-logged-out-button" onclick="location.href='{% url 'login' %}'"> Log in </button>
+						<button class = "user-logged-out-button" onclick="location.href='{% url 'register' %}'"> Sign up </button>
+					{% endif %}
+				
+					<div class = "login-settings" id="login-f" style="display: none">
+						<a href="{% url 'logout' %}" class="login-settings"> Logaut </a>
+						<hr style="width: 70%;">
+					</div>
+				</div>
 			</div>
 		</div>
 
+		
+		<div class="main-block">
+			{% block content %}
 
+				replace me
 
-	</div>
-
-	{% block content %}
-
-		replace me
-
-	{% endblock %}
-
-	<script>
-		function loginSettingsDisplay() {
-		  var x = document.getElementById("login-f");
-		  if (x.style.display == "none") {
-		  	x.style.display = "block";
-		  } else {
-				x.style.display = "none";
-		  }
-		}
-</script>
+			{% endblock %}
+		</div>
+		
+		<script>
+			function loginSettingsDisplay() {
+			  var x = document.getElementById("login-f");
+			  if (x.style.display == "none") {
+				x.style.display = "block";
+			  } else {
+					x.style.display = "none";
+			  }
+			}
+		</script>
 
     </body>
 </html>
