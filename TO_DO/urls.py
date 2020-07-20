@@ -20,9 +20,9 @@ from login.views import user_register, user_login_in
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('register', user_register,  name='register' ),
-    path('login', auth_views.LoginView.as_view(template_name = 'logged_out.html'),  name='login' ),
-    path('logout', auth_views.LogoutView.as_view(template_name = 'logout.html'),  name='logout' ),
-    path('login1', user_login_in,  name='zalogowany' ),
-    path('', auth_views.LoginView.as_view(template_name = 'logged_out.html'),  name='start' ),
+    path('register', user_register,  name='register'),
+    path('login', auth_views.LoginView.as_view(template_name='login.html'),  name='login'),
+    path('logout', auth_views.LogoutView.as_view(template_name='logout.html'),  name='logout'),
+    path('login1', user_login_in,  name='zalogowany'),
+    path('', auth_views.LoginView.as_view(template_name='register.html'),  name='start'),
 ]

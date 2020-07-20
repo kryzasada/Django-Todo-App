@@ -18,7 +18,7 @@ def user_register(request):
     context = {
         'form': form,
     }
-    return render(request, 'logged_out.html', context)
+    return render(request, 'register.html', context)
 
 
 def user_login_in(request, *args, **kwargs):
