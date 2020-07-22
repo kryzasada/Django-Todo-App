@@ -133,3 +133,4 @@ AUTHENTICATION_BACKENDS = [
     'login.authentication.EmailBackend'
 ]
 
+AUTH_PASSWORD_VALIDATORS = []
