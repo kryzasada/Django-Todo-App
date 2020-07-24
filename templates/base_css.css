@@ -38,7 +38,7 @@ div.logo{
 
 div.user-login{
 	width: 23%;
-	height:  220px;
+	height:  120px;
 	min-width : 192px;
 	max-width: 240px;
 
@@ -46,7 +46,6 @@ div.user-login{
 	#background-color: red;
 	display: inline-block;
 	float: right;
-	
 	
 }
 
@@ -120,7 +119,7 @@ div.login-form{
 
 div.login-settings{
 	width: 80%;
-	height : 30%;
+	height : 75px;
 	margin: 0 auto;
 	background-color: #ADC5D1;
 	border: 1px solid black;
@@ -135,6 +134,7 @@ a.login-settings{
 	color: white;
 	text-overflow: ellipsis;
 	overflow: hidden;
+	position: relative;
 	text-decoration: none;
 }
 
