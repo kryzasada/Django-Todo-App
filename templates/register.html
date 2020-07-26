@@ -1,11 +1,66 @@
 {% extends 'index.html' %}
 
 {% block content %}
-<div class = "login-form">
-	<form method="POST"> {% csrf_token %}
-	{{ form.as_p }}
-		<input type="submit" value = "Register">
-	</form>
+<div class="register-form" id="register-form">
+    <p style="font-size: 1.5em; text-align: center;"><b> Create your account </b></p>
+    <form method="POST">
+        {% csrf_token %}
+
+        <div style="width: 55%; margin: 0 auto">
+
+            <label> Email address: </label>
+            <br>
+            {{ form.username }}
+            {{ form.username.error }}
+            {% if form.username.errors %}
+                <p class="label-danger">
+                    Email is invalid or already taken!
+                </p>
+                <script>
+                        var x = document.getElementById('register-form').getBoundingClientRect();
+                        var y = x.height + 50;
+                        y = y.toString() + "px";
+                        document.getElementById("register-form").style.height = y;
+
+                        document.getElementById("id_username").style.borderColor = "red";
+                </script>
+            {% endif %}
+
+            <br style="background-color: red">
+            <br>
+            <label> Password: </label>
+            <br>
+            {{ form.password1 }}
+
+            <br>
+            <br>
+            <label> Confirm password: </label>
+            <br>
+            {{ form.password2 }}
+            {{ form.password2.error }}
+
+            {% if form.password2.errors %}
+                <p class="label-danger">
+                    Please make sure your passwords match!
+                </p>
+                <script>
+                        var x = document.getElementById('register-form').getBoundingClientRect();
+                        var y = x.height + 50;
+                        y = y.toString() + "px";
+                        document.getElementById("register-form").style.height = y;
+
+                        document.getElementById("id_password1").style.borderColor = "red";
+                        document.getElementById("id_password2").style.borderColor = "red";
+                </script>
+            {% endif %}
+
+            <br>
+            <br>
+            <br>
+            <input type="submit" value="Register" style="float: right;   ">
+        </div>
+
+    </form>
 </div>
 
 {% endblock %}

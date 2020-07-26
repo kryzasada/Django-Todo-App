@@ -111,9 +111,21 @@ div.login-form{
 	transform: translateY(-50%);
 	box-sizing: border-box;
 	padding-top: 20px;
-	
-	text-align: center;
+}
 
+div.register-form{
+	width: 330px;
+	min-width: 320px;
+	height : 341px;
+	background-color: #ADC5D1;
+	#background-color: red;
+	border: 1px solid #3F4D53;
+	margin: 0 auto;
+	position: relative;
+	top: 35%;
+	transform: translateY(-30%);
+	box-sizing: border-box;
+	padding-top: 20px;
 
 }
 
@@ -138,8 +150,13 @@ a.login-settings{
 	text-decoration: none;
 }
 
+p.label-danger{
+    font-size: 1.06em;
 
-
+    color: #cb2431;
+    text-align: center;
+    margin-bottom: -25px;
+}
 
 
 
