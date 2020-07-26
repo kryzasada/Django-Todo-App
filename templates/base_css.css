@@ -100,17 +100,15 @@ div.main-block{
 div.login-form{
 	width: 330px;
 	min-width: 320px;
-	height : 20%;
-	min-height: 165px;
+    height : 280px;
 	background-color: #ADC5D1;
 	#background-color: red;
 	border: 1px solid #3F4D53;
 	margin: 0 auto;
 	position: relative;
 	top: 35%;
-	transform: translateY(-50%);
+	transform: translateY(-30%);
 	box-sizing: border-box;
-	padding-top: 20px;
 }
 
 div.register-form{
@@ -125,7 +123,7 @@ div.register-form{
 	top: 35%;
 	transform: translateY(-30%);
 	box-sizing: border-box;
-	padding-top: 20px;
+	padding-top: 10px;
 
 }
 
@@ -148,6 +146,7 @@ a.login-settings{
 	overflow: hidden;
 	position: relative;
 	text-decoration: none;
+
 }
 
 p.label-danger{
@@ -158,5 +157,16 @@ p.label-danger{
     margin-bottom: -25px;
 }
 
+input.login-register-button{
+    width: 100% ;
+    height: 25px;
+    float: right;
+    background-color: #FFCF91;
+    border: 0;
+    border-radius: 25px;
+}
 
+input.login-register-button:hover{
+ background-color: #e8be87;
 
+}

@@ -1,11 +1,44 @@
 {% extends 'index.html' %}
 
 {% block content %}
-<div class = "login-form">
-	<form method="POST"> {% csrf_token %}
-	{{ form.as_p }}
-		<input type="submit" value = "Login">
-	</form>
-</div>
+<div class = "login-form" id="login-form">
+    <p style="font-size: 1.5em; text-align: center; "><b> Log in </b></p>
+    <form method="POST">
+        {% csrf_token %}
 
+        <div style="width: 55%; margin: 0 auto">
+
+            <label> Email: </label>
+            <br>
+            {{ form.username }}
+            {{ form.username.error }}
+
+            <br>
+            <br>
+            <label> Password: </label>
+            <br>
+            {{ form.password }}
+            {{ form.password.error }}
+
+            {% if form.errors %}
+                <p class="label-danger">
+                    Incorrect username or password!
+                </p>
+                <script>
+                        var x = document.getElementById('login-form').getBoundingClientRect();
+                        var y = x.height + 50;
+                        y = y.toString() + "px";
+                        document.getElementById("login-form").style.height = y;
+
+                </script>
+            {% endif %}
+
+            <br>
+            <br>
+            <br>
+            <input type="submit" value="Login" class="login-register-button">
+        </div>
+
+    </form>
+</div>
 {% endblock %}
