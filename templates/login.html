@@ -1,11 +1,11 @@
 {% extends 'index.html' %}
 
 {% block content %}
-<div class="information-block">
-
-
-</div>
-
+{% if register == 1 %}
+    <div class="information-block">
+        <p> You have been registered successfully. Log in now. </p>
+    </div>
+{% endif %}
 
 <div class = "login-form" id="login-form">
     <p style="font-size: 1.5em; text-align: center; "><b> Log in </b></p>

@@ -171,3 +171,19 @@ input.login-register-button:hover{
  background-color: #e8be87;
 
 }
+
+div.information-block{
+    width: 530px;
+    height: 50px;
+    background-color: #ADC5D1;
+    border: 1px solid black;
+    position: relative;
+    top: 12%;
+    left: 50%;
+    -ms-transform: translate(-50%, -52%);
+    transform: translate(-50%, -48%);
+    border-radius: 15px;
+
+    color: black;
+    text-align: center;
+}
