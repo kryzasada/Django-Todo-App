@@ -22,4 +22,4 @@ def user_register(request):
 
 
 def user_login_in(request, *args, **kwargs):
-    return render(request, 'logged_in.html', {})
+    return render(request, 'logged.html', {})
