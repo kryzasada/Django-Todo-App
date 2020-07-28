@@ -17,7 +17,8 @@
 					TO-DO
 				</div>
 				<div class = "user-login">
-					{% if user.is_authenticated %}
+					{% url 'zalogowany' as home_url %}
+					{% if user.is_authenticated and request.get_full_path == home_url %}
 						<button class = "user-logged-in-button" onclick=" loginSettingsDisplay()"> Logged: {{ user.email }} </button>
 					{% else %}
 						<button class = "user-logged-out-button" onclick="location.href='{% url 'login' %}'"> Log in </button>
