@@ -3,17 +3,69 @@
 {% block content %}
 
 <div class="new-todo">
-    <dev class="header">
+    <div class="header">
         <p> New task </p>
-    </dev>
+    </div>
 
-    <dev class="body">
-<!--        <form method="POST" >{% csrf_token %}-->
-<!--    {{ form.as_p }}-->
+    <div class="body">
+
+        <form method="POST" >{% csrf_token %}
+            <label> Title: </label>
+            <br>
 <!--            <input type="date" name="date" value="20120-07-28" required="" id="id_date">-->
-<!--        <input type="submit" value="Wyslij">-->
-<!--    </form>-->
-    </dev>
+            <input type="text" name="title" maxlength="30" required="" id="id_title" style="width: 200px">
+            {{ form.title.errors }}
+
+            <br>
+            <br>
+            <label> Date of end: </label>
+            <br>
+            <input type="date" name="date" value="20120-07-28" required="" id="id_date" style="width: 200px">
+            {% if form.date.errors %}
+                <p class="label-danger">
+                    Email is invalid or already taken!
+                </p>
+            {% endif %}
+
+            <br>
+            <br>
+            <label> Task: </label>
+            <br>
+            <textarea name="text" cols="40" rows="10" required="" id="id_text" style="width: 200px"></textarea>
+            {{ form.date.errors }}
+            {{ form.title.errors }}
+            {{ form.text.errors }}
+            {{ form.users.errors }}
+
+            {% if form.date.errors %}
+                <p class="label-danger">
+                    data
+                </p>
+            {% endif %}
+
+                        {% if form.title.errors %}
+                <p class="label-danger">
+                    title
+                </p>
+            {% endif %}
+
+                        {% if form.text.errors %}
+                <p class="label-danger">
+                    text
+                </p>
+            {% endif %}
+
+                        {% if form.users.errors %}
+                <p class="label-danger">
+                   user
+                </p>
+            {% endif %}
+            <br>
+            <br>
+            <input type="submit" value="Wyslij">
+        </form>
+
+    </div>
 
 </div>
 
