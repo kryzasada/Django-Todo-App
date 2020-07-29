@@ -1,5 +1,43 @@
 {% extends 'index.html' %}
 
 {% block content %}
-	replace 2
+
+<div class="new-todo">
+    <dev class="header">
+        <p> New task </p>
+    </dev>
+
+    <dev class="body">
+<!--        <form method="POST" >{% csrf_token %}-->
+<!--    {{ form.as_p }}-->
+<!--            <input type="date" name="date" value="20120-07-28" required="" id="id_date">-->
+<!--        <input type="submit" value="Wyslij">-->
+<!--    </form>-->
+    </dev>
+
+</div>
+
+<table class="todo-list">
+    <thead style="border: 1px solid black;">
+        <tr>
+            <th style="border: 1px solid black;">Firstname</th>
+            <th style="border: 1px solid black;">Lastname</th>
+<!--            <th style="border: 1px solid black;">Age</th>-->
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="border: 1px solid black;">Jill</td>
+            <td style="border: 1px solid black;">Smith</td>
+<!--            <td style="border: 1px solid black;">50</td>-->
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;">Eve</td>
+            <td style="border: 1px solid black;">Jackson</td>
+<!--            <td style="border: 1px solid black;">94</td>-->
+        </tr>
+    </tbody>
+</table>
+
+
 {% endblock %}
