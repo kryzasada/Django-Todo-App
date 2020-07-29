@@ -19,7 +19,3 @@ def user_register(request):
         'form': form,
     }
     return render(request, 'register.html', context)
-
-
-def user_login_in(request, *args, **kwargs):
-    return render(request, 'logged.html', {})
