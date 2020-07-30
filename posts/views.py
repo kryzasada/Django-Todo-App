@@ -5,13 +5,19 @@ from .forms import UserPostForms
 
 
 def user_login_in(request, *args, **kwargs):
-    form = UserPostForms(request.POST or None)
+    current_user = request.user
 
-    if form.is_valid():
-        form.save(commit=True)
+    if request.method == "POST":
+        form = UserPostForms(request.POST)
+
+        if form.is_valid():
+             post = form.save(commit=True)
+
+    else:
         form = UserPostForms()
 
     context = {
         'form': form,
+        'user_id': current_user.id,
     }
     return render(request, 'logged.html', context)
