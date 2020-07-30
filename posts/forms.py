@@ -7,6 +7,7 @@ class UserPostForms(forms.ModelForm):
         model = UserPost
         fields = [
             'date',
+            'time',
             'title',
             'text',
             'users',
