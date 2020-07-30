@@ -2,92 +2,139 @@
 
 {% block content %}
 
-<div class="new-todo">
+<div class="new-todo" id="new-todo">
     <div class="header">
         <p> New task </p>
     </div>
 
-    <div class="body">
+    <div class="body" id="new-todo-body">
 
-        <form method="POST" >{% csrf_token %}
+        <form method="POST">{% csrf_token %}
+
             <label> Title: </label>
             <br>
-<!--            <input type="date" name="date" value="20120-07-28" required="" id="id_date">-->
-            <input type="text" name="title" maxlength="30" required="" id="id_title" style="width: 200px">
-            {{ form.title.errors }}
-
-            <br>
-            <br>
-            <label> Date of end: </label>
-            <br>
-            <input type="date" name="date" value="20120-07-28" required="" id="id_date" style="width: 200px">
-            {% if form.date.errors %}
-                <p class="label-danger">
-                    Email is invalid or already taken!
+            <input type="text" name="title" maxlength="30" required="" id="id_title" style="width: 215px">
+            {% if form.title.errors %}
+                <p class="label-danger" style="text-align: left;">
+                    Incorrect title!
                 </p>
+                <script>
+                            var x = document.getElementById('new-todo').getBoundingClientRect();
+                            var x1 = document.getElementById('new-todo-body').getBoundingClientRect();
+                            var y = x.height + 60;
+                            var y1 = x1.height + 60;
+                            y = y.toString() + "px";
+                            y1 = y1.toString() + "px";
+                            document.getElementById("new-todo").style.height = y;
+                            document.getElementById("new-todo-body").style.height = y1;
+
+                            document.getElementById("id_title").style.borderColor = "red";
+
+                </script>
             {% endif %}
 
             <br>
             <br>
+
+            <label> Time of end: </label>
+            <br>
+            <input type="date" name="date" value="{% now 'Y-m-d' %}" required="" id="id_date" style="width: 130px">
+            <input type="time" name="time" value="{% now 'G:i' %}" required="" id="id_time" style="width: 80px">
+            {% if form.date.errors %}
+                <p class="label-danger" style="text-align: left;">
+                    Incorrect date!
+                </p>
+                <script>
+                            var x = document.getElementById('new-todo').getBoundingClientRect();
+                            var x1 = document.getElementById('new-todo-body').getBoundingClientRect();
+                            var y = x.height + 60;
+                            var y1 = x1.height + 60;
+                            y = y.toString() + "px";
+                            y1 = y1.toString() + "px";
+                            document.getElementById("new-todo").style.height = y;
+                            document.getElementById("new-todo-body").style.height = y1;
+
+                            document.getElementById("id_date").style.borderColor = "red";
+
+                </script>
+            {% endif %}
+            {% if form.time.errors %}
+                <p class="label-danger" style="text-align: left;">
+                    Incorrect time!
+                </p>
+                <script>
+                            var x = document.getElementById('new-todo').getBoundingClientRect();
+                            var x1 = document.getElementById('new-todo-body').getBoundingClientRect();
+                            var y = x.height + 60;
+                            var y1 = x1.height + 60;
+                            y = y.toString() + "px";
+                            y1 = y1.toString() + "px";
+                            document.getElementById("new-todo").style.height = y;
+                            document.getElementById("new-todo-body").style.height = y1;
+
+                            document.getElementById("id_time").style.borderColor = "red";
+
+                </script>
+            {% endif %}
+
+            <br>
+            <br>
+
             <label> Task: </label>
             <br>
-            <textarea name="text" cols="40" rows="10" required="" id="id_text" style="width: 200px"></textarea>
-            {{ form.date.errors }}
-            {{ form.title.errors }}
-            {{ form.text.errors }}
-            {{ form.users.errors }}
-
-            {% if form.date.errors %}
-                <p class="label-danger">
-                    data
+            <textarea name="text" cols="40" rows="10" required="" id="id_text" style="width: 215px"></textarea>
+            {% if form.text.errors %}
+                <p class="label-danger" style="text-align: left;">
+                    Incorrect task!
                 </p>
+                <script>
+                            var x = document.getElementById('new-todo').getBoundingClientRect();
+                            var x1 = document.getElementById('new-todo-body').getBoundingClientRect();
+                            var y = x.height + 60;
+                            var y1 = x1.height + 60;
+                            y = y.toString() + "px";
+                            y1 = y1.toString() + "px";
+                            document.getElementById("new-todo").style.height = y;
+                            document.getElementById("new-todo-body").style.height = y1;
+
+                            document.getElementById("id_text").style.borderColor = "red";
+
+                </script>
             {% endif %}
 
-                        {% if form.title.errors %}
-                <p class="label-danger">
-                    title
-                </p>
-            {% endif %}
+            <select name="users" required="" id="id_users" style="display: none; height:0">
+                <option value="{{ user_id }}" selected> If you can see this, something isn't working :)</option>
+            </select>
 
-                        {% if form.text.errors %}
-                <p class="label-danger">
-                    text
-                </p>
-            {% endif %}
-
-                        {% if form.users.errors %}
-                <p class="label-danger">
-                   user
-                </p>
-            {% endif %}
             <br>
             <br>
             <input type="submit" value="Wyslij">
-        </form>
 
+        </form>
     </div>
+
 
 </div>
 
 <table class="todo-list">
     <thead style="border: 1px solid black;">
-        <tr>
-            <th style="border: 1px solid black;">Firstname</th>
-            <th style="border: 1px solid black;">Lastname</th>
-<!--            <th style="border: 1px solid black;">Age</th>-->
-        </tr>
+    <tr>
+        <th style="border: 1px solid black;">Firstname</th>
+        <th style="border: 1px solid black;">Lastname</th>
+        <!--            <th style="border: 1px solid black;">Age</th>-->
+    </tr>
     </thead>
     <tbody>
-        <tr>
-            <td style="border: 1px solid black;">Jill</td>
-            <td style="border: 1px solid black;">Smith</td>
-<!--            <td style="border: 1px solid black;">50</td>-->
-        </tr>
-        <tr>
-            <td style="border: 1px solid black;">Eve</td>
-            <td style="border: 1px solid black;">Jackson</td>
-<!--            <td style="border: 1px solid black;">94</td>-->
-        </tr>
+    <tr>
+        <td style="border: 1px solid black;">Jill</td>
+        <td style="border: 1px solid black;">Smith</td>
+        <!--            <td style="border: 1px solid black;">50</td>-->
+    </tr>
+    <tr>
+        <td style="border: 1px solid black;">Eve</td>
+        <td style="border: 1px solid black;">Jackson</td>
+        <!--            <td style="border: 1px solid black;">94</td>-->
+    </tr>
     </tbody>
 </table>
 
