@@ -1,0 +1,10 @@
+<table class="todo-list">
+    <tr>
+        <td class="todo-list-td td1"> {{ iterator.date|date:'d-m-Y' }} <br> {{ iterator.time|date:'G:i' }}</td>
+        <td class="todo-list-td td2"> {{ iterator.title }} </td>
+    </tr>
+    <tr>
+        <td class=""></td>
+        <td class="todo-list-td td3"> {{ iterator.text|slice:"1:-1" }} </td>
+    </tr>
+</table>
