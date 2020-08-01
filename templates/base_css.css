@@ -7,6 +7,7 @@ div.masthead{
 	width: 100%;
 	height:  120px;
 	background-color: #363636;
+	margin-bottom: 40px;
 }
 
 div.masthead-main-block{
@@ -199,7 +200,7 @@ div.new-todo{
     background-color: white;
     float: right;
     box-sizing: border-box;
-    margin: 0 0 0 40px;
+    margin: 0 0 40px 40px;
     padding: 0;
 }
 

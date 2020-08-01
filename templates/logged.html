@@ -13,7 +13,7 @@
 
             <label> Title: </label>
             <br>
-            <input type="text" name="title" maxlength="30" required="" id="id_title" style="width: 215px">
+            <input type="text" name="title" maxlength="30" required="" id="id_title" style="width: 215px; height: 15px;">
             {% if form.title.errors %}
                 <p class="label-danger" style="text-align: left;">
                     Incorrect title!
@@ -38,8 +38,8 @@
 
             <label> Time of end: </label>
             <br>
-            <input type="date" name="date" value="{% now 'Y-m-d' %}" required="" id="id_date" style="width: 130px">
-            <input type="time" name="time" value="{% now 'G:i' %}" required="" id="id_time" style="width: 80px">
+            <input type="date" name="date" value="{% now 'Y-m-d' %}" required="" id="id_date" style="width: 130px; height: 20px;">
+            <input type="time" name="time" value="{% now 'G:i' %}" required="" id="id_time" style="width: 80px; height: 20px;">
             {% if form.date.errors %}
                 <p class="label-danger" style="text-align: left;">
                     Incorrect date!
@@ -82,7 +82,7 @@
 
             <label> Task: </label>
             <br>
-            <textarea name="text" cols="40" rows="10" required="" id="id_text" style="width: 215px"></textarea>
+            <textarea name="text" cols="40" rows="10" required="" id="id_text" style="width: 215px; height: 150px;"></textarea>
             {% if form.text.errors %}
                 <p class="label-danger" style="text-align: left;">
                     Incorrect task!
