@@ -254,7 +254,6 @@ table.todo-list{
 }
 
 .todo-list-td{
-   background-color: red;
    border: 1px solid black;
 }
 
@@ -274,5 +273,85 @@ table.todo-list{
 
 .todo-list-td.td3{
       padding: 20px;
+      max-width: 700px;
       background-color: #E0E0E0;
+      word-break: break-all;
+}
+
+
+
+
+
+
+
+/* Button Styles */
+
+.button {
+  display: inline-flex;
+  width: 65px;
+  height: 35px;
+  float: right;
+  color: #BFC0C0;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: left;
+  overflow: hidden;
+  margin-right: 13px;
+  padding-left: 6px;
+}
+
+.p-delete {
+  color: #BFC0C0;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* Seventh Button */
+
+
+#button-delete {
+  position: sticky;
+  overflow: hidden;
+  cursor: pointer;
+
+}
+
+#dub-trash {
+  width: 94%;
+  height: 70%;
+  background: #FFCF91;
+  left: -100px;
+  position: absolute;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .35s ease-Out;
+  bottom: 0;
+  border: 1px solid #363636;
+  margin-bottom: 3px;
+}
+
+#trash-hover {
+  width: 17px;
+  height: 30px;
+  padding-left: 7px;
+  padding-top: 2px;
+}
+
+#button-delete.text {
+  width: 20px;
+  height: auto;
+}
+
+#button-delete:hover #dub-trash {
+  left: 0;
+  color: #FFCF91;
+}
+
+#button-delete:hover a {
+  left: 150px;
 }
