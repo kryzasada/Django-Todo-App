@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponseRedirect
 from .forms import UserPostForms
 from .models import UserPost
 
@@ -13,8 +14,8 @@ def user_login_in(request, *args, **kwargs):
 
         if form.is_valid():
             form.save(commit=True)
-            form = UserPostForms()
-
+            return HttpResponseRedirect('logged')
+        
     else:
         form = UserPostForms()
 
