@@ -1,8 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import UserPostForms
 from .models import UserPost
-from django.db.models import Q
-
 
 # Create your views here.
 
@@ -25,7 +23,13 @@ def user_login_in(request, *args, **kwargs):
     context = {
         'form': form,
         'user_id': current_user.id,
-        #'obj': obj.values('text'),
         'obj': obj,
     }
     return render(request, 'logged.html', context)
+
+def post_remove(request, user_id):
+    print("\n\n\n\n\n\n")
+    print(UserPost.objects)
+    post = UserPost.objects.get(id=user_id)
+    post.delete()
+    return redirect('logged')

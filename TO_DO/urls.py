@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
 from login.views import user_register
-from posts.views import user_login_in
+from posts.views import user_login_in, post_remove
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +28,5 @@ urlpatterns = [
     path('logout', auth_views.LogoutView.as_view(template_name='logout.html'),  name='logout'),
     path('logged', user_login_in,  name='logged'),
     path('', auth_views.LoginView.as_view(template_name='login.html'),  name='start'),
+    path('post/<user_id>/remove/', post_remove, name='post_remove'),
 ]

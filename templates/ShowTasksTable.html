@@ -5,17 +5,18 @@
     </tr>
     <tr>
         <td class="">
-                    <div class="button" id="button-delete" onclick="location.href='google.com';">
-            <div id="dub-trash">
-                <p class="p-delete">
-                    <img id="trash-hover" src="https://raw.githubusercontent.com/iconic/open-iconic/1d1e8885c5031874b32f4e480e371ce2b1c24144/svg/trash.svg"/>
-                </p>
-            </div>
+            <div class="button" id="button-delete">
+                <div id="dub-trash">
+                    <p class="p-delete" onclick="location.href=' {% url 'post_remove' user_id=iterator.pk %}'">
+                        <img id="trash-hover" src="https://raw.githubusercontent.com/iconic/open-iconic/1d1e8885c5031874b32f4e480e371ce2b1c24144/svg/trash.svg"/>
+                    </p>
+                </div>
             <p class="p-delete text"> Delete </p>
         </div>
 
         </td>
         <td class="todo-list-td td3"> {{ iterator.text }}
+
         </td>
     </tr>
 </table>
