@@ -11,7 +11,7 @@ div.masthead{
 
 div.masthead-main-block{
 	width: 70%;
-	height : 100%; 
+	height : 100%;
 	margin: 0 auto;
 }
 
@@ -22,7 +22,7 @@ div.logo{
 	max-width: 260px;
 	margin-left: 10px;
 	display: inline-block;
-	
+
 	text-align: center;
 	font-size: 3em;
 	font-family: 'Indie Flower', cursive;
@@ -30,8 +30,8 @@ div.logo{
 	line-height: 115px;
 	color: white;
 	letter-spacing: 0.1em;
-	
-	
+
+
 }
 
 div.user-login{
@@ -43,7 +43,7 @@ div.user-login{
 	margin-right: 10px;
 	display: inline-block;
 	float: right;
-	
+
 }
 
 button.user-logged-out-button{
@@ -57,12 +57,12 @@ button.user-logged-out-button{
 	cursor: pointer;
 	border-radius: 60%;
 	outline: none;
-  
+
 	font-size: 1.1em;
 	color: #FFCF91;
-	
+
 	margin-top: 30px;
-	
+
 }
 
 button.user-logged-in-button{
@@ -75,7 +75,7 @@ button.user-logged-in-button{
 	cursor: pointer;
 	border-radius: 30%;
 	outline: none;
-  
+
 	font-size: 1.1em;
 	color: #FFCF91;
 	margin-top: 30px;
@@ -97,7 +97,7 @@ div.main-block{
 	height: calc(100% - 120px);
 	margin: 0 auto;
 }
-	
+
 
 div.login-form{
 	width: 330px;
@@ -182,8 +182,8 @@ div.information-block{
     height: 50px;
     background-color: #E0E0E0;
     border: 1px solid black;
-    position: relative;
-    top: 62%;
+    position: absolute;
+    top: 23%;
     left: 50%;
     -ms-transform: translate(-50%, -52%);
     transform: translate(-50%, -48%);
