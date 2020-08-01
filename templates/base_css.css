@@ -278,14 +278,6 @@ table.todo-list{
       word-break: break-all;
 }
 
-
-
-
-
-
-
-/* Button Styles */
-
 .button {
   display: inline-flex;
   width: 65px;
@@ -309,14 +301,10 @@ table.todo-list{
   letter-spacing: 1px;
 }
 
-/* Seventh Button */
-
-
 #button-delete {
   position: sticky;
   overflow: hidden;
   cursor: pointer;
-
 }
 
 #dub-trash {
@@ -330,7 +318,6 @@ table.todo-list{
   align-items: center;
   justify-content: center;
   transition: all .35s ease-Out;
-  bottom: 0;
   border: 1px solid #363636;
   margin-bottom: 3px;
 }
@@ -338,7 +325,7 @@ table.todo-list{
 #trash-hover {
   width: 17px;
   height: 30px;
-  padding-left: 7px;
+  padding-left: 10%;
   padding-top: 2px;
 }
 
