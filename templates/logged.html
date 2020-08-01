@@ -21,8 +21,8 @@
                 <script>
                             var x = document.getElementById('new-todo').getBoundingClientRect();
                             var x1 = document.getElementById('new-todo-body').getBoundingClientRect();
-                            var y = x.height + 60;
-                            var y1 = x1.height + 60;
+                            var y = x.height + 35;
+                            var y1 = x1.height + 35;
                             y = y.toString() + "px";
                             y1 = y1.toString() + "px";
                             document.getElementById("new-todo").style.height = y;
@@ -47,8 +47,8 @@
                 <script>
                             var x = document.getElementById('new-todo').getBoundingClientRect();
                             var x1 = document.getElementById('new-todo-body').getBoundingClientRect();
-                            var y = x.height + 60;
-                            var y1 = x1.height + 60;
+                            var y = x.height + 35;
+                            var y1 = x1.height + 35;
                             y = y.toString() + "px";
                             y1 = y1.toString() + "px";
                             document.getElementById("new-todo").style.height = y;
@@ -58,6 +58,11 @@
 
                 </script>
             {% endif %}
+
+            {% if form.time.errors and form.date.errors %}
+                <br>
+            {% endif %}
+
             {% if form.time.errors %}
                 <p class="label-danger" style="text-align: left;">
                     Incorrect time!
@@ -65,8 +70,8 @@
                 <script>
                             var x = document.getElementById('new-todo').getBoundingClientRect();
                             var x1 = document.getElementById('new-todo-body').getBoundingClientRect();
-                            var y = x.height + 60;
-                            var y1 = x1.height + 60;
+                            var y = x.height + 35;
+                            var y1 = x1.height + 35;
                             y = y.toString() + "px";
                             y1 = y1.toString() + "px";
                             document.getElementById("new-todo").style.height = y;
@@ -90,8 +95,8 @@
                 <script>
                             var x = document.getElementById('new-todo').getBoundingClientRect();
                             var x1 = document.getElementById('new-todo-body').getBoundingClientRect();
-                            var y = x.height + 60;
-                            var y1 = x1.height + 60;
+                            var y = x.height + 35;
+                            var y1 = x1.height + 35;
                             y = y.toString() + "px";
                             y1 = y1.toString() + "px";
                             document.getElementById("new-todo").style.height = y;
