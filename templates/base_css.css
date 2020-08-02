@@ -1,3 +1,7 @@
+*{
+    border: 1px solid black;
+}
+
 body{
 	margin: 0;
 	background-color: white;
@@ -11,7 +15,7 @@ div.masthead{
 }
 
 div.masthead-main-block{
-	width: 70%;
+	width: 1370px;
 	height : 100%;
 	margin: 0 auto;
 }
@@ -32,7 +36,6 @@ div.logo{
 	color: white;
 	letter-spacing: 0.1em;
 
-
 }
 
 div.user-login{
@@ -41,7 +44,7 @@ div.user-login{
 	min-width : 192px;
 	max-width: 240px;
 
-	margin-right: 10px;
+	margin-right: 5%;
 	display: inline-block;
 	float: right;
 
@@ -241,8 +244,7 @@ input.new-todo-button{
 }
 
 input.new-todo-button:hover{
- background-color: rgb(215, 215, 215);
-
+    background-color: rgb(215, 215, 215);
 }
 
 table.todo-list{
@@ -343,3 +345,57 @@ table.todo-list{
 #button-delete:hover a {
   left: 150px;
 }
+
+/* @media */
+@media all and (max-width:1620px) {
+    div.masthead-main-block{
+
+    width: 80%;
+
+    }
+}
+
+@media all and (max-width:600px) {
+  div.masthead-main-block{
+   width: 100%;
+  }
+}
+
+@media all and (max-width:413px) and (max-width:599px)  {
+  div.logo{
+   	 font-size: 1em;
+   	 min-width : 50px;
+  }
+}
+
+@media all and (max-width:320px) and (max-width:413px)  {
+  div.logo{
+   	 font-size: 0em;
+   	 max-width : 1px;
+   	 max-height : 0px;
+   	 border: 0;
+   	 position: absolute;
+  }
+}
+
+@media all and (max-width:860px)  {
+  div.new-todo{
+    float: none;
+    margin: 0 auto;
+  }
+
+}
+
+@media all and (max-width:860px)  {
+  div.main-block{
+        width: 100%;
+  }
+}
+
+@media all and (max-width:860px)  {
+  table.todo-list{
+       width: 90%;
+
+  }
+}
+
